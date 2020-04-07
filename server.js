@@ -1,6 +1,5 @@
 const 
     nodemailer = require('nodemailer'),
-    smtp = require('nodemailer-smtp-transport'),
     excel = require('read-excel-file/node'),
     env = require('dotenv');
 
