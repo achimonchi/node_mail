@@ -1,8 +1,8 @@
 # Mengirim Email menggunakan Nodejs
 ini adalah repository untuk mengirim email menggunakan nodejs.
 module yg dibutuhkan adalah :
-`nodemailer`
-`read-excel-file`
+- `nodemailer`
+- `read-excel-file`
 
 
 #### Cara Install
