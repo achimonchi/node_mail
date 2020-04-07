@@ -3,19 +3,29 @@ const
     excel = require('read-excel-file/node'),
     env = require('dotenv');
 
+    // gunakan environtment variable
 env.config();
 
+// baca file excel
+// ./test.xlsx adalah nama filenya
 excel('./test.xlsx').then((rows)=>{
-    const arr = [];
     rows.map((r,i)=>{
         if(i!=0){
+            /*
+            dengan asumsi, rows 0 adalah sebuah name_field
+            dan rows 1 - seterusnya adalah rows yang diinginkan
+
+            lalu, dari rows tersebut
+            diambil index 0 nya, dan kirim ke function
+            sendMail
+            */
             sendMail(r[0])
         }
     })
-    // console.log(arr)
     console.table(rows)
 })
 
+// setup transporter
 const transporter = nodemailer.createTransport({
     service : 'gmail',
     secure:false,
@@ -29,7 +39,10 @@ const transporter = nodemailer.createTransport({
     }
 });
 
+// function sendMail
 const sendMail=(data)=>{
+
+    // configuration pada mail
     const mailOptions = {
         from : '"Admin NooBeeID" <reyhan@noobee.id>',
         to : data,
@@ -37,9 +50,9 @@ const sendMail=(data)=>{
         text : 'Coba coba'
     };
 
+    // kirim email
     transporter.sendMail(mailOptions,(err,info)=>{
         if(err) throw err;
         console.log(`Email sent to :  ${data}`)
     })
-    // console.log(data)
 }
