@@ -44,10 +44,12 @@ const sendMail=(data)=>{
 
     // configuration pada mail
     const mailOptions = {
-        from : '"Admin NooBeeID" <reyhan@noobee.id>',
+        from : '"Admin NooBeeID" <no-reply@yourdomain.id>',
         to : data,
-        subject : 'Dari Nodejs',
-        text : 'Coba coba'
+        subject : 'Test send mail',
+        text : 'Hello World',
+        html : `Mohon bantuan isi kuisioner <b>berikut</b> : https://forms.gle/9gkhgPEr8XJgEsxc9
+        `   
     };
 
     // kirim email
