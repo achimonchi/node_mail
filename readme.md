@@ -9,5 +9,8 @@ module yg dibutuhkan adalah :
 setelah clone repo ini, lakukan `npm install`. 
 Setelah itu, silahkan jalankan dengan `node server.js`
 
+#### Pengaturan Email
+Email yang digunakan adalah akun gmail.
+
 #### Kolom 
 Karena email yg digunakan berasal dari file `.xlsx`, maka kolom email harus berada di index 0 (kolom 1)
