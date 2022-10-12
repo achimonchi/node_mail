@@ -11,6 +11,6 @@
   "dependencies": {
     "dotenv": "^8.2.0",
     "nodemailer": "^6.4.6",
-    "read-excel-file": "^4.0.6"
+    "read-excel-file": "^5.5.1"
   }
 }
